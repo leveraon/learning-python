@@ -29,5 +29,6 @@ def merge(left, right):
     return result
 
 unsortedArr = [3, 7, 6, -10, 15, 23.5, 55, -13]
+print("Unsorted array:", unsortedArr)
 sortedArr = mergeSort(unsortedArr)
 print("Sorted array:", sortedArr)

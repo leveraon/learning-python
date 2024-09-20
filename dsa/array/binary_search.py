@@ -17,6 +17,7 @@ def binarySearch(arr, targetVal):
 
 myArray = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 myTarget = 15
+print("Try to find ",myTarget," in target array ", myArray)
 
 result = binarySearch(myArray, myTarget)
 

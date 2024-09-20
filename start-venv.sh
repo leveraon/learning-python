@@ -1,3 +1,5 @@
+#!/bin/bash
+
 DIRECTORY=venv
 if [ ! -d "$DIRECTORY" ]; then
     py -m venv venv

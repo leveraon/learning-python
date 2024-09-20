@@ -1,3 +1,4 @@
+
 def partition(array, low, high):
     pivot = array[high]
     i = low - 1
@@ -20,5 +21,6 @@ def quicksort(array, low=0, high=None):
         quicksort(array, pivot_index+1, high)
 
 my_array = [64, 34, 25, 12, 22, 11, 90, 5]
+print("Unsorted array:", my_array)
 quicksort(my_array)
 print("Sorted array:", my_array)
