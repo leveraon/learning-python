@@ -1,23 +1,3 @@
-# from astrapy import DataAPIClient
-# import os
-
-
-# # Get a specific environment variable
-# api_token = os.environ.get('API_TOKEN')
-# db_url = os.environ.get('DB_URL')
-
-# if api_token and db_url:
-#     print(f"API Token: {api_token} and DB URL : {db_url}")
-# else:
-#     print("API Token or DB URL not found.")
-
-
-# # Initialize the client
-# client = DataAPIClient(api_token)
-# db = client.get_database_by_api_endpoint(db_url)
-
-# print(f"Connected to Astra DB: {db.list_collection_names()}")
-
 import os
 from astrapy import DataAPIClient, Database
 from dotenv import load_dotenv
