@@ -7,6 +7,7 @@ import scrapy
 
 
 class CrawlingItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+    tariff_item = scrapy.Field()
+    harmonized_system_header = scrapy.Field()
+    idicative_description = scrapy.Field()
     pass
