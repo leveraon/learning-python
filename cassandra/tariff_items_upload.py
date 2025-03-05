@@ -22,8 +22,8 @@ def create_collection(database: Database, collection_name: str) -> Collection:
         collection_name,
         metric=VectorMetric.COSINE,
         service=CollectionVectorServiceOptions(
-            provider="nvidia",
-            model_name="NV-Embed-QA",
+            provider="goc",
+            model_name="US_TARIFF",
         ),
     )
 
@@ -66,15 +66,16 @@ def upload_json_data(
 
 def main():
     database = connect_to_database()
+    PATH_TO_DATA_FILE = 'cassandra/mock_data/tariff_items.json'
 
-    collection = create_collection(database, "quickstart_collection")
+    collection = create_collection(database, "tariff_collection")
 
     upload_json_data(
         collection,
-        "PATH_TO_DATA_FILE",
+        PATH_TO_DATA_FILE,
         lambda data: (
-            f"summary: {data['summary']} | "
-            f"genres: {', '.join(data['genres'])}"
+            f"name: {data['name']} | "
+            f"description: {', '.join(data['description'])}"
         ),
     )
 

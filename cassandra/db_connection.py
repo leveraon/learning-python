@@ -19,7 +19,7 @@ def connect_to_database() -> Database:
     """
     endpoint = os.environ.get("DB_URL")
     token = os.environ.get("API_TOKEN")
-
+    
     if not token or not endpoint:
         raise RuntimeError(
             "Environment variables API_TOKEN and DB_URL must be defined"
