@@ -22,8 +22,8 @@ def create_collection(database: Database, collection_name: str) -> Collection:
         collection_name,
         metric=VectorMetric.COSINE,
         service=CollectionVectorServiceOptions(
-            provider="goc",
-            model_name="US_TARIFF",
+            provider="NVDIA",
+            model_name="NV-Embed-QA",
         ),
     )
 
